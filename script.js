@@ -9,15 +9,15 @@
 // }
 // odd_and_even(500);
 
-var a = 1//re declare and reassign
-var a
-let b = 2//reassign
-const c = 3//u cant redeclare or reassign
+// var a = 1//re declare and reassign
+// var a
+// let b = 2//reassign
+// const c = 3//u cant redeclare or reassign
 // var a = 2
 //  b = 5
 //  c = 6
 //  const abc = "Name"}
-var name = ["dog","cat","monkey","lion",1,[4,5]]
+// var name = ["dog","cat","monkey","lion",1,[4,5]]
 
 // name.push(5);//adds an element in the last
 // console.log(name);
@@ -102,4 +102,18 @@ var name = ["dog","cat","monkey","lion",1,[4,5]]
 //     console.log("even")
 // }
 //  _____________________________________________________________________________
+
+// var i = Math.random();
+// console.log(Math.floor(i*11));
+// _____________________________________________________________________________
+function a(){
+    console.log("Kabir")
+}
+
+ setInterval(a,5000)
+
+
+
+
+
 

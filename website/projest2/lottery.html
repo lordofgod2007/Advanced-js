@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="a">
-
-    </div>
     <script>
-        document.getElementById("a").innerHTML="<h1>Kabirz</h1>"
+       var a =  parseInt(prompt("Enter number of tickets : "))
+      console.log(a)
+      var rand = Math.ceil(Math.random()*a);
+      alert("The lucky number is: "+rand.toString());
     </script>
 </body>
 </html>

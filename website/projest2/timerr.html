@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #d1{
+        width:600px;
+        height:600px;
+        margin:auto;
+        background-color:#000000;
+        border-radius:300px;
+        font-family: 'Roboto', sans-serif;
+        color:white;font-size: 150px;
+        margin: auto;
+        text-align:center;
+
+    }
+   button {
+       padding: 10px;
+       color: black;font-size:50px;
+        margin: auto;
+        border-radius:2px;
+        background-color:aqua;
+        display:block;
+   }
+</style>
+</head>
+
+<body>
+    <div id="d1">
+       60
+       <button onclick="start()">Start</button>
+    </div>
+    <script>
+        var count = 60
+        var b;
+        function timer(){
+                        document.getElementById("d1").innerHTML = count;
+                        count--
+                        if(count==-1){clearInterval(b)}
+        }
+        function start(){
+            b = setInterval(timer,1000)
+        }
+    </script>
+</body>
+</html>
