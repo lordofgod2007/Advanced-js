@@ -106,14 +106,47 @@
 // var i = Math.random();
 // console.log(Math.floor(i*11));
 // _____________________________________________________________________________
-function a(){
-    console.log("Kabir")
-}
+// function a(){
+//     console.log("Kabir")
+// }
 
- setInterval(a,5000)
-
-
+//  setInterval(a,5000)
 
 
+// _________________________________________________________________
 
 
+
+// var a = [11,3,55,75,38,21,101]
+// a.sort(function(a,b){return b-a})
+// console.log(a)//this is gonna sort the array in descending order
+
+//___________________________________________________________________________
+
+// var a =[8,59,193,5,83,7]
+// a.sort(function(a,b){return Math.random()-0.5})
+// console.log(a)
+
+// for(let i =1;i<=50;i++){
+//     for(let j =1;j<=50;j++){
+//         if(document.getElementById("A"+j).innerHTML==i)
+//         document.getElementById("A"+j).click()
+        
+//     }
+// }
+
+//_____________________________________________
+// var max = 100;
+// var min = 90;
+// console.log((Math.random()*(max-min+1) + min))
+//random number between max and min
+//____________________________________________
+// Math.floor()
+// Math.ceil()
+// Math.PI
+// console.log(Math.log2(100))
+// console.log(Math.round(5.5))
+// console.log(Math.sqrt(8))
+// var a = "2+2+2+2"
+// console.log(eval(a))
+//__________________________________________

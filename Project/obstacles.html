@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+         #d1{
+             height:150px;
+             width:40px;
+             background-color:aqua;
+             margin:auto;
+             display:inline-block;
+         }
+         #d2{
+            height:200px;
+             width:40px;
+             background-color:aqua;
+             margin:auto;
+            margin-right: 100px;
+            display:inline-block;
+         }
+         #d3{
+            height:100px;
+             width:40px;
+             background-color:aqua;
+             margin:auto;
+             margin-left:100px;
+             display:inline-block;
+         }
+         #d4{
+            height:300px;
+             width:40px;
+             background-color:aqua;
+             margin:auto;
+             margin-left:200px;
+             display:inline-block;
+         }
+     </style>
+
+     <title>Document</title>
+ </head>
+ <body>
+     <div id="d1">
+     </div>
+     <div id = "d2">
+         
+     </div>
+     <div id = "d3">
+
+     </div>
+     <div id ="d4">
+
+     </div>
+     <script>
+         function lappy_bird(){
+              
+          var a = Math.random()*(376-100+1)+100
+          var b = Math.random()*(376-100+1)+100
+          var c = Math.random()*(376-100+1)+100
+          var d = Math.random()*(376-100+1)+100
+         document.getElementById("d1").style.height=a.toString() + "px"
+         document.getElementById("d2").style.height=b.toString() + "px"
+         document.getElementById("d3").style.height=c.toString() + "px"
+         document.getElementById("d4").style.height=d.toString() + "px"
+         }
+         setInterval(lappy_bird,800)
+
+
+     </script>
+ </body>
+ </html>
