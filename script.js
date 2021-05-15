@@ -150,3 +150,46 @@
 // var a = "2+2+2+2"
 // console.log(eval(a))
 //__________________________________________
+
+// var kabir = {name:"kabir",age:14,marks:[100,100,100]}
+
+// console.log(kabir)
+//________________________________________________
+// var a = {
+//    kab:bot
+// }
+// function bot(){
+//     console.log("U r a bot")
+// }
+// a.kab()
+//________________________________________________
+// var a = "inp"
+// function consvow(inp){
+//     if(a){
+        
+//     }
+// }
+
+// function conswow(a){
+//   var b = a.trim()
+//     var alpha = b.split("")
+//     var vowel = 0,consonent = 0
+// for(let i = 0;i<b.length;i++){
+// if(alpha[i].toLowerCase()=="a"||alpha[i].toLowerCase()=="e"||alpha[i].toLowerCase()=="i"||alpha[i].toLowerCase()=="o"||alpha[i].toLowerCase()=="u"){
+//     vowel++
+
+// }
+// else{
+//     consonent++
+// }
+// }
+// console.log(vowel,consonent)
+// }
+// conswow("Ayushi         ")
+//__________________________________________________
+// function wordcounter(a){
+//     var a = "kabir f f s  s   s kkkk  ckd kdfdkfnd"
+//     var b = a.split(" ")
+//    console.log(b)
+//     }
+//    wordcounter()

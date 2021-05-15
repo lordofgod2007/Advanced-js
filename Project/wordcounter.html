@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1{
+        margin:auto;
+        display:block;
+        width:500px;
+        height:600px;
+        }
+        .btn{
+            background-color: black;
+            color:white;
+            font-size:28px;
+            width:140px;
+            height:75px;
+            display:block;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    
+
+<textarea id="t1" name="" id="" cols="30" rows="10"></textarea>
+<button class="btn" onclick="wordcounter()">
+Calculate
+</button>
+<script>
+    function wordcounter(){
+      var  count = 0
+    var a = document.getElementById("t1").value
+    a = a.trim()
+    var b = a.split(" ")
+  
+    
+  for(let i =0;i<b.length;i++){
+ if(b[i]!= " "){
+     count++
+
+ }
+ 
+  }
+  alert("Total words are: " + count)
+}
+</script>
+</body>
+</html>
