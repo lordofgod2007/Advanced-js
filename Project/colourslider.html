@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="b1">
+    
+    <input oninput="ip12()" id = "ip1" type="range" max="255" min="0">
+    <input oninput="ip12()" id = "ip2" type="range" max="255" min="0">
+    <input oninput="ip12()" id = "ip3" type="range" max="255" min="0">
+  
+  <script>
+
+
+    
+     function ip12(){
+        var a = document.getElementById("ip1").value
+        var b = document.getElementById("ip2").value
+        var c = document.getElementById("ip3").value
+
+       document.getElementById("b1").style.backgroundColor=`rgb(${a},${b},${c})`
+
+     
+     }
+    </script>
+</body>
+</html>
