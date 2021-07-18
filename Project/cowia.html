@@ -3,36 +3,75 @@
 <head>
     <link href="https://th.bing.com/th/id/OIP.OoIPMVCuaQ5znBukqE6psAHaE8?pid=ImgDet&rs=1" rel="icon">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <meta name="viewport" content="width=S, initial-scale=1.0">
     <title>Keggo-cowia</title>
 <style>
-
+body {background-color: aqua;
+color: white;
+}
+#d1{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    margin-top:200px;
+}
 </style>
 </head>
 
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Keggo-Cowia</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+             
+                
+          
+            </ul>
+          <input id = "ip1" type="text" placeholder="Type ur pincode">
+<button id = "btn1" onclick="pin()">Search</button>
+          </div>
+        </div>
+      </nav> 
+
+
 <audio id="au1" src=""autoplay></audio>
+<div id = "d1">
+
+</div>
     <script>
         function play(){
     document.getElementById("au1").src = "beep.mp3";
 }
-  function request(){
-    var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=110001&date=31-05-2021"
+function pin(){
+    var pincode = document.getElementById("ip1").value;
+    var url =  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=" + pincode + "&date=31-05-2021"
+    alert("Please keep open this tab and keep checking beep and console for details.Refresh the page to see for another pincode.")
+    setInterval(()=>{request(url)}, 5000)
+}
+  function request(url){
+
     fetch(url).then(function(response){return response.json()}).then(function(finalresponse){
         var count = 0;
             for(let i=0; i<finalresponse.sessions.length; i++){
                 if(finalresponse.sessions[i].available_capacity_dose1 > 0)
                 {
-                             console.log(finalresponse.sessions[i].available_capacity_dose1, finalresponse.sessions[i].name)
+                    document.getElementById("d1").innerHTML = finalresponse.sessions[i].available_capacity_dose1+" : "+ finalresponse.sessions[i].name
 
                                           count++;
                                           play();
                 }
             }
             if(count==0){
-                console.log("No Vaccine slots Available");
+                document.getElementById("d1").innerHTML = "No Vaccine slots Available"
             }
     })
  
@@ -40,7 +79,7 @@
 }
 
 
-setInterval(request, 5000);
+
     </script>
 </body>
 </html>

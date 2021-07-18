@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="best.jpg">
+    <title>Best whiteboard</title>
+    <style>
+#c1{
+    border: 1px solid black;
+} 
+div{
+    display:inline-block;
+}
+
+    </style>
+</head>
+<body>
+    <canvas id="c1" width="500" height="500">
+     Your device doent support this canvas
+    </canvas>
+    <input id="ip1" type="range" max="20" min="1" oninput="ip11()">
+    <div id="red" style="background-color: red; height: 20px; width: 20px" onclick="red()" > 
+          
+    </div>
+    <div id="green" style="background-color: green; height: 20px; width: 20px" onclick="green()"></div> 
+    
+    <div id="blue" style="background-color: blue; height: 20px; width: 20px" onclick="blue()"></div>  
+    <div id="yellow" style="background-color: yellow; height: 20px; width: 20px" onclick="yellow()" > 
+          
+    </div>
+    <div id="black" style="background-color: black; height: 20px; width: 20px" onclick="black()"></div>  
+    
+   
+    <div id="purple" style="background-color: purple; height: 20px; width: 20px" onclick="purple()"></div> 
+    
+    <div id="grey" style="background-color: grey; height: 20px; width: 20px" onclick="grey()"></div>  
+ <div id="white" style="background-image: url('eraser.jpg'); height: 20px; width: 20px" onclick="white()"> <img height="30px" width="30px"src="eraser.jpg"></div> 
+ <script>  
+  var canvas = document.getElementById("c1")
+    var context = canvas.getContext("2d")
+    var paint = false;
+    window.addEventListener("resize",()=>{ canvas.height = window.innerHeight*0.8; canvas.width= window.innerWidth;})
+    function ip11(){ context.lineWidth = document.getElementById("ip1").value}
+    canvas.height = window.innerHeight*0.8; canvas.width= window.innerWidth
+    function startDraw()
+    {  paint = true;}
+    function endDraw(){ paint = false
+    context.beginPath();}
+function red(){ context.strokeStyle = "red"}
+function green(){context.strokeStyle = "green"}
+function blue(){context.strokeStyle = "blue"}
+function yellow(){ context.strokeStyle = "yellow"}
+function black(){context.strokeStyle = "black"}
+function white(){context.strokeStyle = "white"}
+function purple(){ context.strokeStyle = "purple"}
+function grey(){context.strokeStyle = "grey"}
+
+    function draw(e)
+    {     if(!paint)
+        return
+        x = e.clientX; y = e.clientY;
+        context.lineTo(x,y);
+        context.lineCap = "round";
+
+        context.stroke();
+        context.beginPath();
+        context.lineTo(x,y);
+
+    }
+      canvas.addEventListener("mousedown", startDraw)
+      canvas.addEventListener("mouseup", endDraw);
+      canvas.addEventListener("mousemove", draw)
+ 
+</script>
+</body>
+</html>

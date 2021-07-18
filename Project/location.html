@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+p{
+    background-color:aqua;
+    height:60px;
+    width: 200px;
+    margin-left:200px;
+    display:inline-block;
+    font-size:30px;    
+    text-align:center;
+    border-radius:10%
+}
+#btn1{
+ margin:Auto;
+    display:block;
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    background-color:black;
+    color:white;
+
+}
+
+   </style>
+    <title>Document</title>
+</head>
+<body>
+   <div>
+       
+
+    <p>Your Latitude</p>  <p>Your longitude</p> <p>Accuracy</p><br>
+    
+   <p id="lat"></p>   <p id="lon"></p> <p id = "acc"></p>
+    
+    <button id="btn1" onclick="myLocation()">
+       My location    
+       </button>
+   
+     
+   </div>
+   
+   <script>
+    
+     function myLocation(){
+          navigator.geolocation.getCurrentPosition(function(location){
+            
+               var lat = location.coords.latitude;
+               lat = Math.floor(lat*1000)/1000
+               document.getElementById("lat").innerHTML = lat;
+               var long = location.coords.longitude;
+               long = Math.floor(long*1000)/1000
+               document.getElementById("lon").innerHTML = long;
+              
+               document.getElementById("acc").innerHTML= location.coords.accuracy;
+     })
+     }
+   </script> 
+</body>
+</html>
